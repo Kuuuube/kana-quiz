@@ -615,17 +615,6 @@ function hide_answer() {
 	document.getElementById('answer').style.visibility = 'hidden';
 }
 
-function play_sound() {
-	var audio = new Audio('../audio/' + cur_reading + '.mp3');
-	audio.play();
-	document.getElementById('input_box').focus();
-}
-
-function play_other(file) {
-	var audio = new Audio('../audio/' + file + '.mp3');
-	audio.play();
-}
-
 function stroke_order() {
 	document.getElementById('kana').innerHTML = '<img src="stroke/' + cur_kana + '.gif" id="stroke" />';
 	document.getElementById('input_box').focus();
