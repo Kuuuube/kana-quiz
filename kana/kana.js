@@ -313,7 +313,9 @@ function check_answer() {
 
 	if (err) {
 		wrong = true;
-		document.getElementById('message').innerHTML = '<span id="wrong">' + cur_kana + ' = ' + cur_reading + '</span>';
+		if (document.getElementById('wrong-answer-hint').checked) {
+			document.getElementById('message').innerHTML = '<span id="wrong">' + cur_kana + ' = ' + cur_reading + '</span>';
+		}
 	}
 
 	if (answer == cur_reading) {
