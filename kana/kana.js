@@ -350,9 +350,11 @@ function hide_answer() {
 	document.getElementById('answer').style.visibility = 'hidden';
 }
 
+let audioIndex = Math.floor(Math.random() * 2) + 1;
 function play_sound() {
-	randomAudioIndex = Math.floor(Math.random() * 2) + 1;
-	var audio = new Audio('../audio/' + cur_reading + '_' + randomAudioIndex + '.mp3');
+	audioIndex = audioIndex == 1 ? 2 : 1;
+	console.log(audioIndex);
+	var audio = new Audio('../audio/' + cur_reading + '_' + audioIndex + '.mp3');
 	audio.play();
 	document.getElementById('input_box').focus();
 }
