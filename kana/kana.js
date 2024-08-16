@@ -316,6 +316,9 @@ function check_answer() {
 		if (document.getElementById('wrong-answer-hint').checked) {
 			document.getElementById('message').innerHTML = '<span id="wrong">' + cur_kana + ' = ' + cur_reading + '</span>';
 		}
+		if (document.getElementById('wrong-answer-audio').checked && chars[0] !== "x") {
+			play_sound();
+		}
 	}
 
 	if (answer == cur_reading) {
@@ -348,7 +351,8 @@ function hide_answer() {
 }
 
 function play_sound() {
-	var audio = new Audio('../audio/' + cur_reading + '.mp3');
+	randomAudioIndex = Math.floor(Math.random() * 2) + 1;
+	var audio = new Audio('../audio/' + cur_reading + '_' + randomAudioIndex + '.mp3');
 	audio.play();
 	document.getElementById('input_box').focus();
 }
