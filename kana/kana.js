@@ -175,9 +175,7 @@ function check(set) {
 	for (i = 0; i < trs.length; i++) {
 		var tds = trs[i].children;
 		for (x = 0; x < tds.length; x++) {
-			if (tds[x].children[0].id != 'KOI-WIN') {
-				tds[x].children[0].checked = true;
-			}
+			tds[x].children[0].checked = true;
 		}
 	}
 	save_settings();
