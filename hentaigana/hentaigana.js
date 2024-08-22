@@ -50,7 +50,7 @@ var kana = {
 	'hentaigana-wi': {'𛄍𛄎𛄏𛄐𛄑':'wi'},
 	'hentaigana-wu': {'𛄟':'wu'},
 	'hentaigana-we': {'𛄒𛄓𛄔𛄕':'we'},
-	'hentaigana-wo': {'𛄖𛄗𛄘𛄙𛄚𛄛𛄜𛀅':'o'},
+	'hentaigana-wo': {'𛄖𛄗𛄘𛄙𛄚𛄛𛄜𛀅':'wo'},
 	'hentaigana-n': {'𛄝𛄞':'n'},
 }
 
@@ -413,7 +413,7 @@ var active = [];
 var shuffled = [];
 
 var replacements = {
-	'o': ['wo'],
+	'wo': ['o'],
 	'chi': ['ci'],
 	'shi': ['si'],
 	'tsu': ['tu'],
