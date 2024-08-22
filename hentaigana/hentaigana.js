@@ -553,6 +553,10 @@ function show_kana() {
         shuffled.shift();
     }
 
+    if (shuffled.length == 0) {
+        return;
+    }
+
     cur_kana = shuffled[0][0];
     cur_reading = shuffled[0][1];
 
