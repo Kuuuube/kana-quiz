@@ -425,6 +425,22 @@ let romanization_replacements = {
     'ju': ['dyu']
 };
 
+let reading_replacements = {
+    '𛀢': ['ka', 'ke'],
+    '𛀻': ['ki', 'ko'],
+    '𛁭': ['tsu', 'to'],
+    '𛂎': ['te', 'ni'],
+    '𛂘': ['ko', 'ne'],
+    '𛃖': ['ma', 'me'],
+    '𛄝': ['mu', 'mo', 'n'],
+    '𛄞': ['mu', 'mo', 'n'],
+    '𛀆': ['i', 'yi'],
+    '𛀁': ['e', 'ye'],
+    '𛃢': ['ya', 'yo'],
+    '𛁽': ['to', 'ra'],
+    '𛀅': ['a', 'wo']
+}
+
 let cur_kana;
 let cur_reading;
 
@@ -555,11 +571,18 @@ function check_answer() {
 
     chars = answer.split('');
 
-    possible = [cur_reading];
-    if (cur_reading in romanization_replacements) {
-        possible = possible.concat(romanization_replacements[cur_reading]);
+
+    possible_readings = [cur_reading];
+    if (cur_kana in reading_replacements) {
+        possible_readings = possible_readings.concat(reading_replacements[cur_kana])
     }
 
+    possible = [...possible_readings];
+    possible_readings.forEach((possible_reading) => {
+        if (possible_reading in romanization_replacements) {
+            possible = possible.concat(romanization_replacements[possible_reading]);
+        }
+    });
 
     let err = true;
     for (i = 0; i < chars.length; i++) {
