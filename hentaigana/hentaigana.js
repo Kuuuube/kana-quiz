@@ -564,7 +564,14 @@ function show_kana() {
 
     document.getElementById('kana').innerHTML = cur_kana;
 
-    document.getElementById('answer').innerHTML = cur_reading + " (" + source_characters[cur_kana] + ")";
+    let possible_readings = [cur_reading];
+    if (cur_kana in reading_replacements) {
+        possible_readings = possible_readings.concat(reading_replacements[cur_kana])
+    }
+
+    let formatted_readings = [...new Set(possible_readings)].join(", ");
+
+    document.getElementById('answer').innerHTML = formatted_readings + " (" + source_characters[cur_kana] + ")";
 }
 
 function check_answer() {
@@ -576,12 +583,12 @@ function check_answer() {
     chars = answer.split('');
 
 
-    possible_readings = [cur_reading];
+    let possible_readings = [cur_reading];
     if (cur_kana in reading_replacements) {
         possible_readings = possible_readings.concat(reading_replacements[cur_kana])
     }
 
-    possible = [...possible_readings];
+    let possible = [...possible_readings];
     possible_readings.forEach((possible_reading) => {
         if (possible_reading in romanization_replacements) {
             possible = possible.concat(romanization_replacements[possible_reading]);
@@ -607,7 +614,8 @@ function check_answer() {
     if (err) {
         wrong = true;
         if (document.getElementById('wrong-answer-hint').checked) {
-            document.getElementById('message').innerHTML = '<span id="wrong">' + cur_kana + ' = ' + cur_reading + '</span>';
+            let formatted_readings = [...new Set(possible_readings)].join(", ");
+            document.getElementById('message').innerHTML = '<span id="wrong">' + cur_kana + ' = ' + formatted_readings + '</span>';
         }
     }
 
