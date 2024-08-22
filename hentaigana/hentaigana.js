@@ -560,9 +560,9 @@ function check_answer() {
         possible = possible.concat(romanization_replacements[cur_reading]);
     }
 
-    for (i = 0; i < chars.length; i++) {
-        let err = true;
 
+    let err = true;
+    for (i = 0; i < chars.length; i++) {
         for (x = 0; x < possible.length; x++) {
             if (chars[i] == possible[x].charAt(i)) {
                 err = false;
