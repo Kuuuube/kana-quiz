@@ -1,4 +1,4 @@
-var kana = {
+let kana = {
 	'hentaigana-a': {'𛀂𛀅𛀃𛀄':'a'},
 	'hentaigana-i': {'𛀆𛀇𛀈𛀉':'i'},
 	'hentaigana-u': {'𛀊𛀋𛀌𛀍𛀎':'u'},
@@ -409,10 +409,10 @@ let source_characters = {
 	'𛀅' : '惡',
 }
 
-var active = [];
-var shuffled = [];
+let active = [];
+let shuffled = [];
 
-var replacements = {
+let romanization_replacements = {
 	'wo': ['o'],
 	'chi': ['ci'],
 	'shi': ['si'],
@@ -425,11 +425,13 @@ var replacements = {
 	'ju': ['dyu']
 };
 
-var cur_kana;
-var cur_reading;
 
-var total_answered = 0;
-var total_correct = 0;
+
+let cur_kana;
+let cur_reading;
+
+let total_answered = 0;
+let total_correct = 0;
 
 function save_settings() {
 	inputs = document.getElementsByTagName('input');
@@ -447,7 +449,7 @@ function load_settings() {
 	inputs = document.getElementsByTagName('input');
 	for (i = 0; i < inputs.length; i++) {
 		if (inputs[i].type == 'checkbox') {
-			var setting = localStorage.getItem('kana_' + inputs[i].id);
+			let setting = localStorage.getItem('kana_' + inputs[i].id);
 			if (setting === '1') {
 				inputs[i].checked = true;
 			} else if (setting === '0') {
@@ -460,9 +462,9 @@ function load_settings() {
 }
 
 function check(set) {
-	var trs = document.getElementsByClassName(set);
+	let trs = document.getElementsByClassName(set);
 	for (i = 0; i < trs.length; i++) {
-		var tds = trs[i].children;
+		let tds = trs[i].children;
 		for (x = 0; x < tds.length; x++) {
 			tds[x].children[0].checked = true;
 		}
@@ -471,9 +473,9 @@ function check(set) {
 }
 
 function uncheck(set) {
-	var trs = document.getElementsByClassName(set);
+	let trs = document.getElementsByClassName(set);
 	for (i = 0; i < trs.length; i++) {
-		var tds = trs[i].children;
+		let tds = trs[i].children;
 		for (x = 0; x < tds.length; x++) {
 			tds[x].children[0].checked = false;
 		}
@@ -482,8 +484,8 @@ function uncheck(set) {
 }
 
 function shuffle(orig_array) {
-	var array = orig_array.slice(0);
-	var currentIndex = array.length, temporaryValue, randomIndex;
+	let array = orig_array.slice(0);
+	let currentIndex = array.length, temporaryValue, randomIndex;
 
 	while (0 !== currentIndex) {
 
@@ -556,12 +558,12 @@ function check_answer() {
 	chars = answer.split('');
 
 	possible = [cur_reading];
-	if (cur_reading in replacements) {
-		possible = possible.concat(replacements[cur_reading]);
+	if (cur_reading in romanization_replacements) {
+		possible = possible.concat(romanization_replacements[cur_reading]);
 	}
 
 	for (i = 0; i < chars.length; i++) {
-		var err = true;
+		let err = true;
 
 		for (x = 0; x < possible.length; x++) {
 			if (chars[i] == possible[x].charAt(i)) {
@@ -632,11 +634,11 @@ onload = function () {
 
 	show_kana();
 
-	var kana_div = document.getElementById('kana');
+	let kana_div = document.getElementById('kana');
 	kana_div.onmouseover = show_answer;
 	kana_div.onmouseout = hide_answer;
 
-	var answer_input = document.getElementById('input_box');
+	let answer_input = document.getElementById('input_box');
 	answer_input.focus();
 	answer_input.oninput = check_answer;
 	answer_input.onpropertychange = answer_input.oninput;
