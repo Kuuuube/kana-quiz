@@ -245,11 +245,6 @@ function show_kana() {
 		save_settings();
 	}
 
-	if (total_answered > 0) {
-		document.getElementById('count').innerHTML = total_correct + '/' + total_answered;
-		document.getElementById('message').innerHTML = '&nbsp;';
-	}
-
 	if (shuffled.length == 0) {
 		shuffled = shuffle(active);
 	}
@@ -268,7 +263,12 @@ function show_kana() {
 	if (font == 'default') {
 		document.getElementById('kana').innerHTML = cur_kana;
 	} else {
-		document.getElementById('kana').innerHTML = '<img src="fonts/' + font + '/' + cur_kana + '.png" />';
+		document.getElementById('kana').innerHTML = '<img id="kana_image" src="fonts/' + font + '/' + cur_kana + '.png" />';
+		//when image fails to load
+		document.getElementById('kana_image').onerror = function() {
+			collect();
+			show_kana();
+		};
 	}
 	document.getElementById('answer').innerHTML = cur_reading;
 
@@ -325,6 +325,11 @@ function check_answer() {
 			total_correct += 1;
 		}
 		show_kana();
+	}
+
+	if (total_answered > 0) {
+		document.getElementById('count').innerHTML = total_correct + '/' + total_answered;
+		document.getElementById('message').innerHTML = '&nbsp;';
 	}
 }
 
