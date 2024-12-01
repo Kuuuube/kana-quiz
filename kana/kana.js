@@ -159,7 +159,7 @@ function load_settings() {
 	const inputs = document.getElementsByTagName('input');
 	for (let i = 0; i < inputs.length; i++) {
 		if (inputs[i].type == 'checkbox') {
-			var setting = localStorage.getItem('kana_' + inputs[i].id);
+			const setting = localStorage.getItem('kana_' + inputs[i].id);
 			if (setting === '1') {
 				inputs[i].checked = true;
 			} else if (setting === '0') {
@@ -173,9 +173,9 @@ function load_settings() {
 
 // eslint-disable-next-line no-unused-vars
 function check(set) {
-	var trs = document.getElementsByClassName(set);
+	let trs = document.getElementsByClassName(set);
 	for (let i = 0; i < trs.length; i++) {
-		var tds = trs[i].children;
+		let tds = trs[i].children;
 		for (let x = 0; x < tds.length; x++) {
 			tds[x].children[0].checked = true;
 		}
@@ -185,9 +185,9 @@ function check(set) {
 
 // eslint-disable-next-line no-unused-vars
 function uncheck(set) {
-	var trs = document.getElementsByClassName(set);
+	let trs = document.getElementsByClassName(set);
 	for (let i = 0; i < trs.length; i++) {
-		var tds = trs[i].children;
+		let tds = trs[i].children;
 		for (let x = 0; x < tds.length; x++) {
 			tds[x].children[0].checked = false;
 		}
@@ -196,8 +196,8 @@ function uncheck(set) {
 }
 
 function shuffle(orig_array) {
-	var array = orig_array.slice(0);
-	var currentIndex = array.length, temporaryValue, randomIndex;
+	let array = orig_array.slice(0);
+	let currentIndex = array.length, temporaryValue, randomIndex;
 
 	while (0 !== currentIndex) {
 
@@ -261,7 +261,7 @@ function show_kana() {
 
 	shuffled.shift();
 
-	var font = fonts[Math.floor(Math.random() * fonts.length)];
+	let font = fonts[Math.floor(Math.random() * fonts.length)];
 
 	if (font == 'default') {
 		document.getElementById('kana').innerHTML = cur_kana;
@@ -295,8 +295,9 @@ function check_answer() {
 		possible = possible.concat(replacements[cur_reading]);
 	}
 
+	let err = false;
 	for (let i = 0; i < chars.length; i++) {
-		var err = true;
+		err = true;
 
 		for (let x = 0; x < possible.length; x++) {
 			if (chars[i] == possible[x].charAt(i)) {
@@ -361,14 +362,14 @@ function hide_answer() {
 let audioIndex = Math.floor(Math.random() * 2) + 1;
 function play_sound() {
 	audioIndex = audioIndex == 1 ? 2 : 1;
-	var audio = new Audio('../audio/' + cur_reading + '_' + audioIndex + '.mp3');
+	let audio = new Audio('../audio/' + cur_reading + '_' + audioIndex + '.mp3');
 	audio.play();
 	document.getElementById('input_box').focus();
 }
 
 // eslint-disable-next-line no-unused-vars
 function play_other(file) {
-	var audio = new Audio('../audio/' + file + '.mp3');
+	let audio = new Audio('../audio/' + file + '.mp3');
 	audio.play();
 }
 
@@ -394,11 +395,11 @@ onload = function () {
 	document.getElementById('tool_sound').onclick = play_sound;
 	document.getElementById('tool_stroke').onclick = stroke_order;
 
-	var kana_div = document.getElementById('kana');
+	let kana_div = document.getElementById('kana');
 	kana_div.onmouseover = show_answer;
 	kana_div.onmouseout = hide_answer;
 
-	var answer_input = document.getElementById('input_box');
+	let answer_input = document.getElementById('input_box');
 	answer_input.focus();
 	answer_input.oninput = check_answer;
 	answer_input.onpropertychange = answer_input.oninput;
