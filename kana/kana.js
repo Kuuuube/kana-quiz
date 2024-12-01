@@ -170,6 +170,7 @@ function load_settings() {
 	collect();
 }
 
+// eslint-disable-next-line no-unused-vars
 function check(set) {
 	var trs = document.getElementsByClassName(set);
 	for (i = 0; i < trs.length; i++) {
@@ -181,6 +182,7 @@ function check(set) {
 	save_settings();
 }
 
+// eslint-disable-next-line no-unused-vars
 function uncheck(set) {
 	var trs = document.getElementsByClassName(set);
 	for (i = 0; i < trs.length; i++) {
@@ -364,6 +366,7 @@ function play_sound() {
 	document.getElementById('input_box').focus();
 }
 
+// eslint-disable-next-line no-unused-vars
 function play_other(file) {
 	var audio = new Audio('../audio/' + file + '.mp3');
 	audio.play();

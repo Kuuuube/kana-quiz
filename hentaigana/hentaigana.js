@@ -458,6 +458,7 @@ function load_settings() {
     collect();
 }
 
+// eslint-disable-next-line no-unused-vars
 function check(set) {
     let trs = document.getElementsByClassName(set);
     for (i = 0; i < trs.length; i++) {
@@ -469,6 +470,7 @@ function check(set) {
     save_settings();
 }
 
+// eslint-disable-next-line no-unused-vars
 function uncheck(set) {
     let trs = document.getElementsByClassName(set);
     for (i = 0; i < trs.length; i++) {
@@ -631,6 +633,7 @@ function hide_answer() {
     document.getElementById('answer').style.visibility = 'hidden';
 }
 
+// eslint-disable-next-line no-unused-vars
 function stroke_order() {
     document.getElementById('kana').innerHTML = '<img src="stroke/' + cur_kana + '.gif" id="stroke" />';
     document.getElementById('input_box').focus();
