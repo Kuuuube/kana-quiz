@@ -329,7 +329,9 @@ function check_answer() {
 
 	if (total_answered > 0) {
 		document.getElementById('count').innerHTML = total_correct + '/' + total_answered;
-		document.getElementById('message').innerHTML = '&nbsp;';
+		if (!wrong) {
+			document.getElementById('message').innerHTML = '&nbsp;';
+		}
 	}
 }
 
