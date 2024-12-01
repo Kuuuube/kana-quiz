@@ -429,12 +429,13 @@ let cur_reading;
 
 let total_answered = 0;
 let total_correct = 0;
+let wrong = false;
 
 function save_settings() {
-    inputs = document.getElementsByTagName('input');
-    for (i = 0; i < inputs.length; i++) {
+    const inputs = document.getElementsByTagName('input');
+    for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].type == 'checkbox') {
-            checked = inputs[i].checked ? '1' : '0';
+            const checked = inputs[i].checked ? '1' : '0';
             localStorage.setItem('kana_' + inputs[i].id, checked);
         }
     }
@@ -443,8 +444,8 @@ function save_settings() {
 }
 
 function load_settings() {
-    inputs = document.getElementsByTagName('input');
-    for (i = 0; i < inputs.length; i++) {
+    const inputs = document.getElementsByTagName('input');
+    for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].type == 'checkbox') {
             let setting = localStorage.getItem('kana_' + inputs[i].id);
             if (setting === '1') {
@@ -461,9 +462,9 @@ function load_settings() {
 // eslint-disable-next-line no-unused-vars
 function check(set) {
     let trs = document.getElementsByClassName(set);
-    for (i = 0; i < trs.length; i++) {
+    for (let i = 0; i < trs.length; i++) {
         let tds = trs[i].children;
-        for (x = 0; x < tds.length; x++) {
+        for (let x = 0; x < tds.length; x++) {
             tds[x].children[0].checked = true;
         }
     }
@@ -473,9 +474,9 @@ function check(set) {
 // eslint-disable-next-line no-unused-vars
 function uncheck(set) {
     let trs = document.getElementsByClassName(set);
-    for (i = 0; i < trs.length; i++) {
+    for (let i = 0; i < trs.length; i++) {
         let tds = trs[i].children;
-        for (x = 0; x < tds.length; x++) {
+        for (let x = 0; x < tds.length; x++) {
             tds[x].children[0].checked = false;
         }
     }
@@ -500,11 +501,11 @@ function shuffle(orig_array) {
 }
 
 function collect() {
-    kanacheck = document.getElementsByClassName('kanacheck');
+    const kanacheck = document.getElementsByClassName('kanacheck');
     active = [];
     shuffled = [];
-    for (i = 0; i < kanacheck.length; i++) {
-        cur = kanacheck[i];
+    for (let i = 0; i < kanacheck.length; i++) {
+        let cur = kanacheck[i];
         if (cur.checked == true) {
             for (let key in kana[cur.id]) {
                 let key_array = Array.from(key);
@@ -560,12 +561,12 @@ function show_kana() {
 }
 
 function check_answer() {
-    answer = document.getElementById('input_box').value.toLowerCase();
+    let answer = document.getElementById('input_box').value.toLowerCase();
     if (!answer) {
         answer = 'x';
     }
 
-    chars = answer.split('');
+    let chars = answer.split('');
 
 
     let possible_readings = [cur_reading];
@@ -581,8 +582,8 @@ function check_answer() {
     });
 
     let err = true;
-    for (i = 0; i < chars.length; i++) {
-        for (x = 0; x < possible.length; x++) {
+    for (let i = 0; i < chars.length; i++) {
+        for (let x = 0; x < possible.length; x++) {
             if (chars[i] == possible[x].charAt(i)) {
                 err = false;
             }
@@ -643,8 +644,8 @@ function stroke_order() {
 onload = function () {
     load_settings();
 
-    inputs = document.getElementsByTagName('input');
-    for (i = 0; i < inputs.length; i++) {
+    let inputs = document.getElementsByTagName('input');
+    for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].type == 'checkbox') {
             inputs[i].onclick = save_settings;
             inputs[i].onpropertychange = inputs[i].oninput;
