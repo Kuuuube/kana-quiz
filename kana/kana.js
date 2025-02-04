@@ -121,7 +121,7 @@ let show_tools = ['あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く', 'け',
 
 let replacements = {
 	'o': ['wo'],
-	'chi': ['ci'],
+	'chi': ['ti'],
 	'shi': ['si'],
 	'tsu': ['tu'],
 	'zu': ['du'],

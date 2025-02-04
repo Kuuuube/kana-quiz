@@ -397,7 +397,7 @@ let shuffled = [];
 
 let romanization_replacements = {
     'wo': ['o'],
-    'chi': ['ci'],
+    'chi': ['ti'],
     'shi': ['si'],
     'tsu': ['tu'],
     'zu': ['du'],
