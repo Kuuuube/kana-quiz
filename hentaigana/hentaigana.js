@@ -562,8 +562,8 @@ function show_kana() {
 
 function check_answer() {
     let answer = document.getElementById('input_box').value.toLowerCase();
-    if (!answer) {
-        answer = 'x';
+    if (!answer || answer.length <= 0) {
+        return;
     }
 
     let chars = answer.split('');
