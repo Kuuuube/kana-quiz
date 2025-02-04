@@ -396,13 +396,12 @@ onload = function () {
 	document.getElementById('tool_stroke').onclick = stroke_order;
 
 	let kana_div = document.getElementById('kana');
-	kana_div.onmouseover = show_answer;
-	kana_div.onmouseout = hide_answer;
+	kana_div.addEventListener("mouseover", show_answer, false);
+	kana_div.addEventListener("mouseout", hide_answer, false);
 
 	let answer_input = document.getElementById('input_box');
 	answer_input.focus();
-	answer_input.oninput = check_answer;
-	answer_input.onpropertychange = answer_input.oninput;
+	answer_input.addEventListener("input", check_answer, false);
 
     document.body.onkeydown = function (e) {
         let focus_keys = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
