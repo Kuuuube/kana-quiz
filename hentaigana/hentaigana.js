@@ -581,8 +581,9 @@ function check_answer() {
         }
     });
 
-    let err = true;
+    let err = false;
     for (let i = 0; i < chars.length; i++) {
+        err = true;
         for (let x = 0; x < possible.length; x++) {
             if (chars[i] == possible[x].charAt(i)) {
                 err = false;
