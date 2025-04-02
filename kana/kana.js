@@ -135,6 +135,19 @@ let replacements = {
 	'sho': ['syo'],
 };
 
+function get_display_reading(reading) {
+	let display_replacements = {
+		'wo': 'o',
+		'du': 'zu',
+		'di': 'ji',
+		'dya': 'ja',
+		'dyo': 'jo',
+		'dyu': 'ju',
+	};
+
+	return display_replacements[reading] ?? reading;
+}
+
 let active = [];
 let shuffled = [];
 let fonts = [];
@@ -276,7 +289,7 @@ function show_kana() {
 			show_kana();
 		};
 	}
-	document.getElementById('answer').innerHTML = cur_reading;
+	document.getElementById('answer').innerHTML = get_display_reading(cur_reading);
 
 	if (show_tools.indexOf(cur_kana) == -1) {
 		document.getElementById('tool_stroke').style.visibility = 'hidden';
@@ -319,7 +332,7 @@ function check_answer() {
 	if (err) {
 		wrong = true;
 		if (document.getElementById('wrong-answer-hint').checked) {
-			document.getElementById('message').innerHTML = '<span id="wrong">' + cur_kana + ' = ' + cur_reading + '</span>';
+			document.getElementById('message').innerHTML = '<span id="wrong">' + cur_kana + ' = ' + get_display_reading(cur_reading) + '</span>';
 		}
 		if (document.getElementById('wrong-answer-audio').checked && chars[0] !== "x") {
 			play_sound();
