@@ -378,7 +378,7 @@ function hide_answer() {
 let audioIndex = Math.floor(Math.random() * 2) + 1;
 function play_sound() {
 	audioIndex = audioIndex == 1 ? 2 : 1;
-	let audio = new Audio('../audio/' + cur_reading + '_' + audioIndex + '.mp3');
+	let audio = new Audio('../audio/' + get_display_reading(cur_reading) + '_' + audioIndex + '.mp3');
 	audio.play();
 	document.getElementById('input_box').focus();
 }
