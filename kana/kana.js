@@ -129,7 +129,10 @@ let replacements = {
 	'fu': ['hu'],
 	'ja': ['dya'],
 	'jo': ['dyo'],
-	'ju': ['dyu']
+	'ju': ['dyu'],
+	'sha': ['sya'],
+	'shu': ['syu'],
+	'sho': ['syo'],
 };
 
 let active = [];
