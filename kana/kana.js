@@ -1,4 +1,8 @@
-const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
+const dark_mode_preference = window.matchMedia("(prefers-color-scheme: dark)");
+let theme = dark_mode_preference.matches ? "dark" : "light";
+dark_mode_preference.addEventListener("change", () => {
+	theme = dark_mode_preference.matches ? "dark" : "light";
+});
 
 let kana = {
 	'hsingle':
