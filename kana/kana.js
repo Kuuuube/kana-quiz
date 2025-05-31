@@ -1,3 +1,5 @@
+const theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? 'dark' : 'light';
+
 let kana = {
 	'hsingle':
 		{ 'あ': 'a', 'い': 'i', 'う': 'u', 'え': 'e', 'お': 'o' },
@@ -282,7 +284,7 @@ function show_kana() {
 	if (font == 'default') {
 		document.getElementById('kana').innerHTML = cur_kana;
 	} else {
-		document.getElementById('kana').innerHTML = '<img id="kana_image" src="fonts/' + font + '/' + cur_kana + '.png" />';
+		document.getElementById('kana').innerHTML = '<img id="kana_image" src="fonts_' + theme + '/' + font + '/' + cur_kana + '.png" />';
 		//when image fails to load
 		document.getElementById('kana_image').onerror = function() {
 			collect();
@@ -378,19 +380,19 @@ function hide_answer() {
 let audioIndex = Math.floor(Math.random() * 2) + 1;
 function play_sound() {
 	audioIndex = audioIndex == 1 ? 2 : 1;
-	let audio = new Audio('../audio/' + get_display_reading(cur_reading) + '_' + audioIndex + '.mp3');
+	let audio = new Audio('audio/' + get_display_reading(cur_reading) + '_' + audioIndex + '.mp3');
 	audio.play();
 	document.getElementById('input_box').focus();
 }
 
 // eslint-disable-next-line no-unused-vars
 function play_other(file) {
-	let audio = new Audio('../audio/' + file + '.mp3');
+	let audio = new Audio('audio/' + file + '.mp3');
 	audio.play();
 }
 
 function stroke_order() {
-	document.getElementById('kana').innerHTML = '<img src="stroke/' + cur_kana + '.gif" id="stroke" />';
+	document.getElementById('kana').innerHTML = '<img src="stroke_' + theme + '/' + cur_kana + '.gif" id="stroke" />';
 	document.getElementById('input_box').focus();
 }
 

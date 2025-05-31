@@ -1,0 +1,289 @@
+:root {
+    --border-color: #dae2ef;
+    --header-color: #dbb7b9;
+    --header-color2: #c0b0b1;
+    --link-color: #90dcf8;
+
+    --input-border: #7b7b7b;
+
+    --text-color: #ffffff;
+
+    --lighter-gray: rgb(100, 100, 100);
+    --light-gray: rgb(78, 78, 78);
+    --medium-gray: rgb(50, 50, 50);
+    --dark-gray: rgb(34, 34, 34);
+
+    --transparent: rgba(0, 0, 0, 0);
+
+    --correct-answer: #048600;
+    --wrong-answer: #860000;
+
+    --speaker-button: url(play-dark.png);
+    --shortcuts-image: url(shortcuts-dark.png);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --border-color: #dae2ef;
+        --header-color: #8e6264;
+        --header-color2: #6f4749;
+        --link-color: #4d99b7;
+
+        --input-border: #eeeeee;
+
+        --text-color: #000000;
+
+        --lighter-gray: rgb(211, 211, 211);
+        --light-gray: #f7f7f7;
+        --medium-gray: #ffffff;
+        --dark-gray: #eef5ed;
+
+        --transparent: rgba(0, 0, 0, 0);
+
+        --correct-answer: #5dff57;
+        --wrong-answer: #ff4848;
+
+        --speaker-button: url(play-light.png);
+        --shortcuts-image: url(shortcuts-light.png);
+    }
+}
+
+body {
+	font-family:Verdana;
+	background-color:rgb(34, 34, 34);
+	color: #fff;
+}
+
+a {
+	color:#90dcf8;
+	font-weight:bold;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+h1 {
+	text-align: center;
+	color: #dbb7b9;
+}
+
+table {
+	border-collapse:collapse;
+	border:1px solid #dae2ef;
+}
+td {
+	border-left:1px solid #dae2ef;
+	border-right:1px solid #dae2ef;
+	text-align:center;
+	padding:.3em .4em;
+}
+
+.checkrow {
+	background-color: rgb(78, 78, 78);
+}
+
+.kana {
+	font-size:140%;
+	white-space:nowrap;
+}
+
+#rikaichan-window {
+	display:none!important;
+}
+
+.romaji {
+	white-space:nowrap;
+	display:block;
+	font-size:85%;
+}
+
+#kanabox {
+	margin:auto;
+	width:42em;
+	padding:.7em 2em 0em 2em;
+	background-color:rgb(50, 50, 50);
+	border-radius:3px;
+}
+
+#options {
+	margin:1.5em auto;
+	width:46em;
+	padding:0;
+	background-color:rgb(50, 50, 50);
+	border-radius:3px;
+}
+
+#options_inner {
+	padding:0 1.4em 1.4em 1.4em;
+}
+
+h2 {
+	background-color:rgb(78, 78, 78);
+	color:#dbb7b9;
+	margin:0;
+	padding:.3em .5em;
+	border-radius:3px 3px 0px 0px;
+}
+
+h3 {
+	color:#dbb7b9;
+	border-bottom:1px dotted #c0b0b1;
+	padding-bottom:9px;
+	padding-left:.4em;
+	margin-top:1.6em;
+}
+
+.checkall a {
+	color:#90dcf8;
+	cursor:pointer;
+}
+
+.checkall {
+	float:right;
+	font-size:85%;
+}
+
+h2 .checkall {
+	font-size:70%;
+	padding-top:3px;
+}
+
+#kana_con {
+	text-align:center;
+	font-size:300%;
+	height: 60px;
+}
+
+#kana_con:has(#kana_image),
+#kana_con:has(#stroke) {
+	max-height: 60px;
+}
+
+#stroke {
+	height: 60px;
+	margin: 0;
+	padding: 0;
+}
+
+#kana_image {
+	height: 60px;
+	margin: 0;
+	padding: 0;
+}
+
+#input {
+	text-align:center;
+	margin-top:.8em;
+}
+
+#input_box {
+	width:16em;
+	border:1px solid #7b7b7b;
+	padding:6px;
+	text-align:center;
+	font-size:100%;
+	color:#ffffff;
+	background-color: rgb(34, 34, 34);
+}
+
+ul#tools, #count {
+	margin-top:1em;
+	font-size:78%;
+}
+
+ul#tools {
+	padding:0px;
+	display:inline-block;
+}
+
+ul#tools li {
+	display:inline;
+	list-style-type: none;
+
+	margin-right:1.2em;
+	font-weight: bold;
+}
+
+ul#tools li a {
+	color:#90dcf8;
+	cursor:pointer;
+}
+
+#theme {
+	margin-top: 1em;
+	height: max-content;
+	font-size: 78%;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	height: max-content;
+}
+
+#right-row {
+	display: flex;
+	justify-content: center;
+}
+
+#count {
+	float:right;
+	padding-right: 1em;
+}
+
+#show_options {
+	display: none;
+}
+#show_options + div {
+	display:none;
+}
+#show_options:checked + div {
+	display:block;
+}
+
+#message {
+	text-align:center;
+	font-size:90%;
+	margin-top:1em;
+}
+
+#answer {
+	text-align:center;
+	margin-bottom:.4em;
+	font-size:90%;
+	visibility:hidden;
+}
+
+#wrong {
+	color:red;
+}
+
+.font_example {
+	font-size:2.2em;
+}
+
+.font_example img {
+	width:47px;
+}
+
+#explanation {
+	line-height:1.6em;
+}
+
+.help {
+	cursor:help;
+	border-bottom:1px dotted #aaa;
+}
+
+.speaker-button {
+	content: var(--speaker-button);
+    user-select: none;
+}
+
+.shortcuts-image {
+	min-width: 277px;
+	min-height: 326px;
+}
+
+.shortcuts-image:hover {
+	content: var(--shortcuts-image)
+}
