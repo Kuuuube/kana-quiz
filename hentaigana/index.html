@@ -1,16 +1,245 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-         <meta http-equiv="refresh" content="0; url=./hentaigana-dark/index.html">
-        <script>
-            window.location.href = "./hentaigana-dark/index.html"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-        Attempting to redirect to:
-        <br>
-        <a href="./hentaigana-dark/index.html">./hentaigana-dark/index.html</a>
-    </body>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>変体仮名</title>
+	<link rel="stylesheet" href="hentaigana.css">
+	<link rel="stylesheet" href="fonts/hentaigana-font.css">
+</head>
+
+<body>
+	<script src="hentaigana.js"></script>
+
+	<h1>変体仮名</h1>
+
+	<div id="kanabox">
+		<div id="answer">&nbsp;</div>
+		<div id="kana_con" class="hentaigana-font"><span id="kana"></span></div>
+		<div id="input"><input type="text" id="input_box" autofocus></div>
+		<div id="message" class="hentaigana-font">&nbsp;</div>
+		<div class="row">
+			<ul id="tools"><li></li></ul>
+			<div id="right-row">
+				<div id="count"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="options">
+		<h2>
+			<label class="collapse" for="show_options">設定 <span class="checkall"><a>見せる/隠す</a></span></label>
+		</h2>
+		<input id="show_options" type="checkbox">
+		<div id="options_inner">
+			<h3>変体仮名 <span class="checkall"><a onclick="check('hentaigana-check1')">全てオンにする</a> | <a
+						onclick="uncheck('hentaigana-check1')">全てオフにする</a></span></h3>
+			<table>
+				<tbody>
+					<tr class="checkrow hentaigana-check1">
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-a" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-i" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-u" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-e" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-o" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ka" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ki" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ku" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ke" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ko" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-sa" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-si" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-su" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-se" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-so" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ta" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ti" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-tu" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-te" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-to" checked></td>
+					</tr>
+					<tr class="hiragana-row">
+						<td><span class="kana">あ</span></td>
+						<td><span class="kana">い</span></td>
+						<td><span class="kana">う</span></td>
+						<td><span class="kana">え</span></td>
+						<td><span class="kana">お</span></td>
+						<td><span class="kana">か</span></td>
+						<td><span class="kana">き</span></td>
+						<td><span class="kana">く</span></td>
+						<td><span class="kana">け</span></td>
+						<td><span class="kana">こ</span></td>
+						<td><span class="kana">さ</span></td>
+						<td><span class="kana">し</span></td>
+						<td><span class="kana">す</span></td>
+						<td><span class="kana">せ</span></td>
+						<td><span class="kana">そ</span></td>
+						<td><span class="kana">た</span></td>
+						<td><span class="kana">ち</span></td>
+						<td><span class="kana">つ</span></td>
+						<td><span class="kana">て</span></td>
+						<td><span class="kana">と</span></td>
+					</tr>
+					<tr class="hentaigana-font">
+						<td><span class="kana">𛀂𛀅𛀃𛀄</span></td>
+						<td><span class="kana">𛀆𛀇𛀈𛀉</span></td>
+						<td><span class="kana">𛀊𛀋𛀌𛀍𛀎</span></td>
+						<td><span class="kana">𛀁𛀏𛀐𛀑𛀒𛀓</span></td>
+						<td><span class="kana">𛀔𛀕𛀖</span></td>
+						<td><span class="kana">𛀗𛀘𛀙𛀚𛀛𛀢𛀜𛀝𛀞𛀟𛀠𛀡</span></td>
+						<td><span class="kana">𛀣𛀤𛀥𛀦𛀻𛀧𛀨𛀩𛀪</span></td>
+						<td><span class="kana">𛀫𛀬𛀭𛀮𛀯𛀰𛀱</span></td>
+						<td><span class="kana">𛀳𛀲𛀢𛀴𛀵𛀶𛀷</span></td>
+						<td><span class="kana">𛀸𛂘𛀹𛀻𛀺</span></td>
+						<td><span class="kana">𛀼𛀽𛀾𛀿𛁀𛁁𛁂𛁃</span></td>
+						<td><span class="kana">𛁄𛁅𛁆𛁇𛁈𛁉</span></td>
+						<td><span class="kana">𛁊𛁋𛁌𛁍𛁎𛁏𛁐𛁑</span></td>
+						<td><span class="kana">𛁒𛁓𛁔𛁕𛁖</span></td>
+						<td><span class="kana">𛁗𛁘𛁙𛁚𛁛𛁜𛁝</span></td>
+						<td><span class="kana">𛁞𛁟𛁠𛁡</span></td>
+						<td><span class="kana">𛁢𛁣𛁤𛁥𛁦𛁧𛁨</span></td>
+						<td><span class="kana">𛁩𛁪𛁫𛁬𛁭</span></td>
+						<td><span class="kana">𛁮𛁯𛁰𛁱𛁲𛁳𛁴𛁵𛁶𛂎</span></td>
+						<td><span class="kana">𛁷𛁸𛁹𛁺𛁻𛁼𛁽𛁭</span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>&nbsp; <span class="checkall"><a onclick="check('hentaigana-check2')">全てオンにする</a> | <a
+				onclick="uncheck('hentaigana-check2')">全てオフにする</a></span></h3>
+			<table>
+				<tbody>
+					<tr class="checkrow hentaigana-check2">
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-na" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ni" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-nu" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ne" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-no" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ha" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-hi" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-hu" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-he" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ho" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ma" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-mi" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-mu" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-me" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-mo" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ya" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-yi" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-yu" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ye" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-yo" checked></td>
+					</tr>
+					<tr class="hiragana-row">
+						<td><span class="kana">な</span></td>
+						<td><span class="kana">に</span></td>
+						<td><span class="kana">ぬ</span></td>
+						<td><span class="kana">ね</span></td>
+						<td><span class="kana">の</span></td>
+						<td><span class="kana">は</span></td>
+						<td><span class="kana">ひ</span></td>
+						<td><span class="kana">ふ</span></td>
+						<td><span class="kana">へ</span></td>
+						<td><span class="kana">ほ</span></td>
+						<td><span class="kana">ま</span></td>
+						<td><span class="kana">み</span></td>
+						<td><span class="kana">む</span></td>
+						<td><span class="kana">め</span></td>
+						<td><span class="kana">も</span></td>
+						<td><span class="kana">や</span></td>
+						<td><span class="kana hentaigana-font">𛀆</span></td>
+						<td><span class="kana">ゆ</span></td>
+						<td><span class="kana hentaigana-font">𛀁</span></td>
+						<td><span class="kana">よ</span></td>
+					</tr>
+					<tr class="hentaigana-font">
+						<td><span class="kana">𛁾𛁿𛂀𛂁𛂂𛂃𛂄𛂅𛂆</span></td>
+						<td><span class="kana">𛂇𛂈𛂉𛂊𛂋𛂌𛂍𛂎</span></td>
+						<td><span class="kana">𛂏𛂐𛂑</span></td>
+						<td><span class="kana">𛂒𛂓𛂔𛂕𛂖𛂗𛂘</span></td>
+						<td><span class="kana">𛂙𛂚𛂛𛂜𛂝</span></td>
+						<td><span class="kana">𛂞𛂟𛂠𛂡𛂢𛂣𛂤𛂥𛂦𛂧𛂨</span></td>
+						<td><span class="kana">𛂩𛂪𛂫𛂬𛂭𛂮𛂯</span></td>
+						<td><span class="kana">𛂰𛂱𛂲</span></td>
+						<td><span class="kana">𛂳𛂴𛂵𛂶𛂷𛂸𛂹</span></td>
+						<td><span class="kana">𛂺𛂻𛂼𛂽𛂾𛂿𛃀𛃁</span></td>
+						<td><span class="kana">𛃂𛃃𛃄𛃅𛃆𛃇𛃈𛃖</span></td>
+						<td><span class="kana">𛃉𛃊𛃋𛃌𛃍𛃎𛃏</span></td>
+						<td><span class="kana">𛃐𛃑𛃒𛃓𛄝𛄞</span></td>
+						<td><span class="kana">𛃔𛃕𛃖</span></td>
+						<td><span class="kana">𛃗𛃘𛃙𛃚𛃛𛃜𛄝𛄞</span></td>
+						<td><span class="kana">𛃝𛃞𛃟𛃠𛃡𛃢</span></td>
+						<td><span class="kana">𛀆</span></td>
+						<td><span class="kana">𛃣𛃤𛃥𛃦</span></td>
+						<td><span class="kana">𛀁</span></td>
+						<td><span class="kana">𛃧𛃨𛃩𛃪𛃫𛃬𛃢</span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>&nbsp; <span class="checkall"><a onclick="check('hentaigana-check3')">全てオンにする</a> | <a
+				onclick="uncheck('hentaigana-check3')">全てオフにする</a></span></h3>
+			<table>
+				<tbody>
+					<tr class="checkrow hentaigana-check3">
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ra" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ri" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ru" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-re" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-ro" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-wa" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-wi" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-wu" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-we" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-wo" checked></td>
+						<td><input type="checkbox" class="kanacheck" id="hentaigana-n" checked></td>
+					</tr>
+					<tr class="hiragana-row">
+						<td><span class="kana">ら</span></td>
+						<td><span class="kana">り</span></td>
+						<td><span class="kana">る</span></td>
+						<td><span class="kana">れ</span></td>
+						<td><span class="kana">ろ</span></td>
+						<td><span class="kana">わ</span></td>
+						<td><span class="kana">ゐ</span></td>
+						<td><span class="kana hentaigana-font">𛄟</span></td>
+						<td><span class="kana">ゑ</span></td>
+						<td><span class="kana">を</span></td>
+						<td><span class="kana">ん</span></td>
+					</tr>
+					<tr class="hentaigana-font">
+						<td><span class="kana">𛃭𛃮𛃯𛃰𛁽</span></td>
+						<td><span class="kana">𛃱𛃲𛃳𛃴𛃵𛃶𛃷</span></td>
+						<td><span class="kana">𛃸𛃹𛃺𛃻𛃼𛃽</span></td>
+						<td><span class="kana">𛃾𛃿𛄀𛄁</span></td>
+						<td><span class="kana">𛄂𛄃𛄄𛄅𛄆𛄇</span></td>
+						<td><span class="kana">𛄈𛄉𛄊𛄋𛄌</span></td>
+						<td><span class="kana">𛄍𛄎𛄏𛄐𛄑</span></td>
+						<td><span class="kana">𛄟</span></td>
+						<td><span class="kana">𛄒𛄓𛄔𛄕</span></td>
+						<td><span class="kana">𛄖𛄗𛄘𛄙𛄚𛄛𛄜𛀅</span></td>
+						<td><span class="kana">𛄝𛄞</span></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>その他</h3>
+			<div class="misc-options">
+				<input type="checkbox" id="wrong-answer-hint" checked><label for="wrong-answer-hint" class="wrong-answer-hint">間違えるのヒント</label>
+			</div>
+
+			<h3>説明</h3>
+			<div id="explanation">
+				<p>
+					<a href="https://ja.wikipedia.org/wiki/%E5%A4%89%E4%BD%93%E4%BB%AE%E5%90%8D">Wikipedia (日本語)</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://en.wikipedia.org/wiki/Hentaigana">Wikipedia (英語)</a>
+				</p>
+			</div>
+
+		</div>
+	</div>
+</body>
+
 </html>
