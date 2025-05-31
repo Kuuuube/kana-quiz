@@ -8,6 +8,7 @@
 
     --text-color: #ffffff;
 
+    --lighter-gray2: rgb(165, 165, 165);
     --lighter-gray: rgb(100, 100, 100);
     --light-gray: rgb(78, 78, 78);
     --medium-gray: rgb(50, 50, 50);
@@ -271,7 +272,7 @@ ul#tools li a {
 
 .help {
 	cursor:help;
-	border-bottom:1px dotted #aaa;
+	border-bottom:1px dotted var(--lighter-gray2);
 }
 
 .speaker-button {
