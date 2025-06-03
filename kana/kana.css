@@ -90,16 +90,16 @@
 }
 
 body {
-	font-family:Verdana;
-	background-color:var(--dark-gray);
+	font-family: Verdana;
+	background-color: var(--dark-gray);
 	color: var(--text-color);
 }
 
 a {
-	color:var(--link-color);
-	font-weight:bold;
-	cursor:pointer;
-	text-decoration:none;
+	color: var(--link-color);
+	font-weight: bold;
+	cursor: pointer;
+	text-decoration: none;
 }
 
 h1 {
@@ -108,14 +108,14 @@ h1 {
 }
 
 table {
-	border-collapse:collapse;
-	border:1px solid var(--border-color);
+	border-collapse: collapse;
+	border: 1px solid var(--border-color);
 }
 td {
-	border-left:1px solid var(--border-color);
-	border-right:1px solid var(--border-color);
-	text-align:center;
-	padding:.3em .4em;
+	border-left: 1px solid var(--border-color);
+	border-right: 1px solid var(--border-color);
+	text-align: center;
+	padding: .3em .4em;
 }
 
 .checkrow {
@@ -123,74 +123,74 @@ td {
 }
 
 .kana {
-	font-size:140%;
-	white-space:nowrap;
+	font-size: 140%;
+	white-space: nowrap;
 }
 
 #rikaichan-window {
-	display:none!important;
+	display: none!important;
 }
 
 .romaji {
-	white-space:nowrap;
-	display:block;
-	font-size:85%;
+	white-space: nowrap;
+	display: block;
+	font-size: 85%;
 }
 
 #kanabox {
-	margin:auto;
-	width:42em;
-	padding:.7em 2em 0em 2em;
-	background-color:var(--medium-gray);
-	border-radius:3px;
+	margin: auto;
+	width: 42em;
+	padding: .7em 2em 0em 2em;
+	background-color: var(--medium-gray);
+	border-radius: 3px;
 }
 
 #options {
-	margin:1.5em auto;
-	width:46em;
-	padding:0;
-	background-color:var(--medium-gray);
-	border-radius:3px;
+	margin: 1.5em auto;
+	width: 46em;
+	padding: 0;
+	background-color: var(--medium-gray);
+	border-radius: 3px;
 }
 
 #options_inner {
-	padding:0 1.4em 1.4em 1.4em;
+	padding: 0 1.4em 1.4em 1.4em;
 }
 
 h2 {
-	background-color:var(--light-gray);
-	color:var(--header-color);
-	margin:0;
-	padding:.3em .5em;
-	border-radius:3px 3px 0px 0px;
+	background-color: var(--light-gray);
+	color: var(--header-color);
+	margin: 0;
+	padding: .3em .5em;
+	border-radius: 3px 3px 0px 0px;
 }
 
 h3 {
-	color:var(--header-color);
-	border-bottom:1px dotted var(--header-color2);
-	padding-bottom:9px;
-	padding-left:.4em;
-	margin-top:1.6em;
+	color: var(--header-color);
+	border-bottom: 1px dotted var(--header-color2);
+	padding-bottom: 9px;
+	padding-left: .4em;
+	margin-top: 1.6em;
 }
 
 .checkall a {
-	color:var(--link-color);
-	cursor:pointer;
+	color: var(--link-color);
+	cursor: pointer;
 }
 
 .checkall {
-	float:right;
-	font-size:85%;
+	float: right;
+	font-size: 85%;
 }
 
 h2 .checkall {
-	font-size:70%;
-	padding-top:3px;
+	font-size: 70%;
+	padding-top: 3px;
 }
 
 #kana_con {
-	text-align:center;
-	font-size:300%;
+	text-align: center;
+	font-size: 300%;
 	height: 60px;
 }
 
@@ -212,41 +212,41 @@ h2 .checkall {
 }
 
 #input {
-	text-align:center;
-	margin-top:.8em;
+	text-align: center;
+	margin-top: .8em;
 }
 
 #input_box {
-	width:16em;
-	border:1px solid var(--input-border);
-	padding:6px;
-	text-align:center;
-	font-size:100%;
-	color:var(--text-color);
+	width: 16em;
+	border: 1px solid var(--input-border);
+	padding: 6px;
+	text-align: center;
+	font-size: 100%;
+	color: var(--text-color);
 	background-color: var(--dark-gray);
 }
 
 ul#tools, #count {
-	margin-top:1em;
-	font-size:78%;
+	margin-top: 1em;
+	font-size: 78%;
 }
 
 ul#tools {
-	padding:0px;
-	display:inline-block;
+	padding: 0px;
+	display: inline-block;
 }
 
 ul#tools li {
-	display:inline;
+	display: inline;
 	list-style-type: none;
 
-	margin-right:1.2em;
+	margin-right: 1.2em;
 	font-weight: bold;
 }
 
 ul#tools li a {
-	color:var(--link-color);
-	cursor:pointer;
+	color: var(--link-color);
+	cursor: pointer;
 }
 
 #theme {
@@ -267,7 +267,7 @@ ul#tools li a {
 }
 
 #count {
-	float:right;
+	float: right;
 	padding-right: 1em;
 }
 
@@ -275,27 +275,27 @@ ul#tools li a {
 	display: none;
 }
 #show_options + div {
-	display:none;
+	display: none;
 }
 #show_options:checked + div {
-	display:block;
+	display: block;
 }
 
 #message {
-	text-align:center;
-	font-size:90%;
-	margin-top:1em;
+	text-align: center;
+	font-size: 90%;
+	margin-top: 1em;
 }
 
 #answer {
-	text-align:center;
-	margin-bottom:.4em;
-	font-size:90%;
-	visibility:hidden;
+	text-align: center;
+	margin-bottom: .4em;
+	font-size: 90%;
+	visibility: hidden;
 }
 
 #wrong {
-	color:var(--wrong-answer);
+	color: var(--wrong-answer);
 }
 
 .font_example {
@@ -303,7 +303,7 @@ ul#tools li a {
 }
 
 .font_example_image {
-	width:47px;
+	width: 47px;
 }
 
 .A-OTF-BokutohNStd-Regular-example { content: var(--A-OTF-BokutohNStd-Regular-example); }
@@ -327,12 +327,12 @@ ul#tools li a {
 .sakamata-font-500-nostrict-example { content: var(--sakamata-font-500-nostrict-example); }
 
 #explanation {
-	line-height:1.6em;
+	line-height: 1.6em;
 }
 
 .help {
-	cursor:help;
-	border-bottom:1px dotted var(--lighter-gray2);
+	cursor: help;
+	border-bottom: 1px dotted var(--lighter-gray2);
 }
 
 .speaker-button {
