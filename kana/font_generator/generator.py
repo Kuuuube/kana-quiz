@@ -1,4 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
+from fontTools.ttLib import TTFont
+from fontTools.misc.encodingTools import getEncoding
 import os
 
 kanas = [
@@ -14,6 +16,11 @@ colors = [
     "black"
 ]
 
+def char_in_font(font_path, char):
+    font_cmap = TTFont(font_path).getBestCmap()
+    code_point = ord(char)
+    return code_point in font_cmap
+
 def get_font_size(font_name, image, text_to_render):
     fontsize = 10
     font = ImageFont.truetype(font_name, fontsize)
@@ -24,6 +31,15 @@ def get_font_size(font_name, image, text_to_render):
 
 for kana in kanas:
     for font in fonts:
+        invalid_font_kana_combo = False
+        for char in kana:
+            if not char_in_font(font, char):
+                print("Missing `" + char + "` from `" + kana + "` in `" + font + "`, skipping.")
+                invalid_font_kana_combo = True
+                break
+        if invalid_font_kana_combo:
+            continue
+
         for color in colors:
             image_width, image_height = (92, 60)
             image = Image.new(mode = "RGBA", size = (image_width, image_height))
