@@ -1,8 +1,8 @@
 @font-face {
-	font-family: "BabelStone Han Hentaigana";
-	src: url(../fonts/BabelStoneHanHentaiganaLatinIncluded.woff2);
+    font-family: "BabelStone Han Hentaigana";
+    src: url(../fonts/BabelStoneHanHentaiganaLatinIncluded.woff2);
 }
 
 .hentaigana-font {
-	font-family: "BabelStone Han Hentaigana", "BabelStone Han","UniHentaiKana","IPAmj明朝","花園明朝A",HanaMinA,HanaMinB,"和田研中丸ゴシック2004絵文字","WadaLabChuMaruGo2004Emoji","和田研細丸ゴシック2004絵文字","WadaLabMaruGo2004Emoji",mincho,serif;
+    font-family: "BabelStone Han Hentaigana", "BabelStone Han","UniHentaiKana","IPAmj明朝","花園明朝A",HanaMinA,HanaMinB,"和田研中丸ゴシック2004絵文字","WadaLabChuMaruGo2004Emoji","和田研細丸ゴシック2004絵文字","WadaLabMaruGo2004Emoji",mincho,serif;
 }

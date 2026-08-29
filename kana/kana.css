@@ -22,36 +22,36 @@
     --speaker-button: url(play-dark.png);
     --shortcuts-image: url(shortcuts-dark.png);
 
-	--font-spritemap: url("font_preview/font_preview_spritemap_dark.png");
-	--font-spritemap-grid-width: 90px;
-	--font-spritemap-grid-height: 62px;
+    --font-spritemap: url("font_preview/font_preview_spritemap_dark.png");
+    --font-spritemap-grid-width: 90px;
+    --font-spritemap-grid-height: 62px;
 
-	--font-spritemap-column-count: 10;
-	--font-spritemap-row-count: 2;
-	--font-spritemap-scale-factor: 2;
+    --font-spritemap-column-count: 10;
+    --font-spritemap-row-count: 2;
+    --font-spritemap-scale-factor: 2;
 
-	--font-spritemap-scaled-width: calc(var(--font-spritemap-grid-width) / var(--font-spritemap-scale-factor));
-	--font-spritemap-scaled-height: calc(var(--font-spritemap-grid-height) / var(--font-spritemap-scale-factor));
+    --font-spritemap-scaled-width: calc(var(--font-spritemap-grid-width) / var(--font-spritemap-scale-factor));
+    --font-spritemap-scaled-height: calc(var(--font-spritemap-grid-height) / var(--font-spritemap-scale-factor));
 
-	--A-OTF-BokutohNStd-Regular-example: url("fonts_dark/A-OTF-BokutohNStd-Regular/ぎ.png");
-	--A-OTF-FolkPro-Regular-example: url("fonts_dark/A-OTF-FolkPro-Regular/ぎ.png");
-	--A-OTF-HappyNStd-Regular-example: url("fonts_dark/A-OTF-HappyNStd-Regular/ぎ.png");
-	--A-OTF-KumoyaStd-Regular-example: url("fonts_dark/A-OTF-KumoyaStd-Regular/ぎ.png");
-	--A-OTF-KyokaICAPro-Regular-example: url("fonts_dark/A-OTF-KyokaICAPro-Regular/ぎ.png");
-	--A-OTF-Shuuei3Std-Regular-example: url("fonts_dark/A-OTF-Shuuei3Std-Regular/ぎ.png");
-	--A-OTF-ZenGoNStd-Regular-example: url("fonts_dark/A-OTF-ZenGoNStd-Regular/ぎ.png");
-	--ArmedBanana-example: url("fonts_dark/ArmedBanana/ぎ.png");
-	--hiragino-kaku-example: url("fonts_dark/hiragino-kaku/ぎ.png");
-	--DFCry5_0-example: url("fonts_dark/DFCry5_0/ぎ.png");
-	--DFMrg3_0-example: url("fonts_dark/DFMrg3_0/ぎ.png");
-	--F5AJCCPE_0-example: url("fonts_dark/F5AJCCPE_0/ぎ.png");
-	--F5AJCMHG-example: url("fonts_dark/F5AJCMHG/ぎ.png");
-	--MT_TARE-example: url("fonts_dark/MT_TARE/ぎ.png");
-	--SM-WIN-example: url("fonts_dark/SM-WIN/ぎ.png");
-	--SNsanafon-example: url("fonts_dark/SNsanafon/ぎ.png");
-	--sea-example: url("fonts_dark/sea/ぎ.png");
-	--KOI-WIN-example: url("fonts_dark/KOI-WIN/ぎ.png");
-	--sakamata-font-500-nostrict-example: url("fonts_dark/sakamata-font-500-nostrict/ぎ.png");
+    --A-OTF-BokutohNStd-Regular-example: url("fonts_dark/A-OTF-BokutohNStd-Regular/ぎ.png");
+    --A-OTF-FolkPro-Regular-example: url("fonts_dark/A-OTF-FolkPro-Regular/ぎ.png");
+    --A-OTF-HappyNStd-Regular-example: url("fonts_dark/A-OTF-HappyNStd-Regular/ぎ.png");
+    --A-OTF-KumoyaStd-Regular-example: url("fonts_dark/A-OTF-KumoyaStd-Regular/ぎ.png");
+    --A-OTF-KyokaICAPro-Regular-example: url("fonts_dark/A-OTF-KyokaICAPro-Regular/ぎ.png");
+    --A-OTF-Shuuei3Std-Regular-example: url("fonts_dark/A-OTF-Shuuei3Std-Regular/ぎ.png");
+    --A-OTF-ZenGoNStd-Regular-example: url("fonts_dark/A-OTF-ZenGoNStd-Regular/ぎ.png");
+    --ArmedBanana-example: url("fonts_dark/ArmedBanana/ぎ.png");
+    --hiragino-kaku-example: url("fonts_dark/hiragino-kaku/ぎ.png");
+    --DFCry5_0-example: url("fonts_dark/DFCry5_0/ぎ.png");
+    --DFMrg3_0-example: url("fonts_dark/DFMrg3_0/ぎ.png");
+    --F5AJCCPE_0-example: url("fonts_dark/F5AJCCPE_0/ぎ.png");
+    --F5AJCMHG-example: url("fonts_dark/F5AJCMHG/ぎ.png");
+    --MT_TARE-example: url("fonts_dark/MT_TARE/ぎ.png");
+    --SM-WIN-example: url("fonts_dark/SM-WIN/ぎ.png");
+    --SNsanafon-example: url("fonts_dark/SNsanafon/ぎ.png");
+    --sea-example: url("fonts_dark/sea/ぎ.png");
+    --KOI-WIN-example: url("fonts_dark/KOI-WIN/ぎ.png");
+    --sakamata-font-500-nostrict-example: url("fonts_dark/sakamata-font-500-nostrict/ぎ.png");
 }
 
 @media (prefers-color-scheme: light) {
@@ -78,235 +78,235 @@
         --speaker-button: url(play-light.png);
         --shortcuts-image: url(shortcuts-light.png);
 
-		--font-spritemap: url("font_preview/font_preview_spritemap_light.png");
+        --font-spritemap: url("font_preview/font_preview_spritemap_light.png");
     }
 }
 
 body {
-	font-family: Verdana;
-	background-color: var(--dark-gray);
-	color: var(--text-color);
+    font-family: Verdana;
+    background-color: var(--dark-gray);
+    color: var(--text-color);
 }
 
 a {
-	color: var(--link-color);
-	font-weight: bold;
-	cursor: pointer;
-	text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 h1 {
-	text-align: center;
-	color: var(--header-color);
+    text-align: center;
+    color: var(--header-color);
 }
 
 table {
-	border-collapse: collapse;
-	border: 1px solid var(--border-color);
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
 }
 td {
-	border-left: 1px solid var(--border-color);
-	border-right: 1px solid var(--border-color);
-	text-align: center;
-	padding: .3em .4em;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    text-align: center;
+    padding: .3em .4em;
 }
 
 .checkrow {
-	background-color: var(--light-gray);
+    background-color: var(--light-gray);
 }
 
 .kana {
-	font-size: 140%;
-	white-space: nowrap;
+    font-size: 140%;
+    white-space: nowrap;
 }
 
 #rikaichan-window {
-	display: none!important;
+    display: none!important;
 }
 
 .romaji {
-	white-space: nowrap;
-	display: block;
-	font-size: 85%;
+    white-space: nowrap;
+    display: block;
+    font-size: 85%;
 }
 
 #kanabox {
-	margin: auto;
-	width: 42em;
-	padding: .7em 2em 0em 2em;
-	background-color: var(--medium-gray);
-	border-radius: 3px;
+    margin: auto;
+    width: 42em;
+    padding: .7em 2em 0em 2em;
+    background-color: var(--medium-gray);
+    border-radius: 3px;
 }
 
 #options {
-	margin: 1.5em auto;
-	width: 46em;
-	padding: 0;
-	background-color: var(--medium-gray);
-	border-radius: 3px;
+    margin: 1.5em auto;
+    width: 46em;
+    padding: 0;
+    background-color: var(--medium-gray);
+    border-radius: 3px;
 }
 
 #options_inner {
-	padding: 0 1.4em 1.4em 1.4em;
+    padding: 0 1.4em 1.4em 1.4em;
 }
 
 h2 {
-	background-color: var(--light-gray);
-	color: var(--header-color);
-	margin: 0;
-	padding: .3em .5em;
-	border-radius: 3px 3px 0px 0px;
+    background-color: var(--light-gray);
+    color: var(--header-color);
+    margin: 0;
+    padding: .3em .5em;
+    border-radius: 3px 3px 0px 0px;
 }
 
 h3 {
-	color: var(--header-color);
-	border-bottom: 1px dotted var(--header-color2);
-	padding-bottom: 9px;
-	padding-left: .4em;
-	margin-top: 1.6em;
+    color: var(--header-color);
+    border-bottom: 1px dotted var(--header-color2);
+    padding-bottom: 9px;
+    padding-left: .4em;
+    margin-top: 1.6em;
 }
 
 .checkall a {
-	color: var(--link-color);
-	cursor: pointer;
+    color: var(--link-color);
+    cursor: pointer;
 }
 
 .checkall {
-	float: right;
-	font-size: 85%;
+    float: right;
+    font-size: 85%;
 }
 
 h2 .checkall {
-	font-size: 70%;
-	padding-top: 3px;
+    font-size: 70%;
+    padding-top: 3px;
 }
 
 #kana_con {
-	text-align: center;
-	font-size: 300%;
-	height: 60px;
+    text-align: center;
+    font-size: 300%;
+    height: 60px;
 }
 
 #kana_con:has(#kana_image),
 #kana_con:has(#stroke) {
-	max-height: 60px;
+    max-height: 60px;
 }
 
 #stroke {
-	height: 60px;
-	margin: 0;
-	padding: 0;
+    height: 60px;
+    margin: 0;
+    padding: 0;
 }
 
 #kana_image {
-	height: 60px;
-	margin: 0;
-	padding: 0;
+    height: 60px;
+    margin: 0;
+    padding: 0;
 }
 
 #input {
-	text-align: center;
-	margin-top: .8em;
+    text-align: center;
+    margin-top: .8em;
 }
 
 #input_box {
-	width: 16em;
-	border: 1px solid var(--input-border);
-	padding: 6px;
-	text-align: center;
-	font-size: 100%;
-	color: var(--text-color);
-	background-color: var(--dark-gray);
+    width: 16em;
+    border: 1px solid var(--input-border);
+    padding: 6px;
+    text-align: center;
+    font-size: 100%;
+    color: var(--text-color);
+    background-color: var(--dark-gray);
 }
 
 ul#tools, #count {
-	margin-top: 1em;
-	font-size: 78%;
+    margin-top: 1em;
+    font-size: 78%;
 }
 
 ul#tools {
-	padding: 0px;
-	display: inline-block;
+    padding: 0px;
+    display: inline-block;
 }
 
 ul#tools li {
-	display: inline;
-	list-style-type: none;
+    display: inline;
+    list-style-type: none;
 
-	margin-right: 1.2em;
-	font-weight: bold;
+    margin-right: 1.2em;
+    font-weight: bold;
 }
 
 ul#tools li a {
-	color: var(--link-color);
-	cursor: pointer;
+    color: var(--link-color);
+    cursor: pointer;
 }
 
 #theme {
-	margin-top: 1em;
-	height: max-content;
-	font-size: 78%;
+    margin-top: 1em;
+    height: max-content;
+    font-size: 78%;
 }
 
 .row {
-	display: flex;
-	justify-content: space-between;
-	height: max-content;
+    display: flex;
+    justify-content: space-between;
+    height: max-content;
 }
 
 #right-row {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 #count {
-	float: right;
-	padding-right: 1em;
+    float: right;
+    padding-right: 1em;
 }
 
 #show_options {
-	display: none;
+    display: none;
 }
 #show_options + div {
-	display: none;
+    display: none;
 }
 #show_options:checked + div {
-	display: block;
+    display: block;
 }
 
 #message {
-	text-align: center;
-	font-size: 90%;
-	margin-top: 1em;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 1em;
 }
 
 #answer {
-	text-align: center;
-	margin-bottom: .4em;
-	font-size: 90%;
-	visibility: hidden;
+    text-align: center;
+    margin-bottom: .4em;
+    font-size: 90%;
+    visibility: hidden;
 }
 
 #wrong {
-	color: var(--wrong-answer);
+    color: var(--wrong-answer);
 }
 
 .font_example {
-	font-size: 2.2em;
+    font-size: 2.2em;
 }
 
 .font_example_image {
-	overflow: visible;
-	display: inline-block;
-	width: var(--font-spritemap-scaled-width);
-	height: var(--font-spritemap-scaled-height);
-	background: var(--font-spritemap);
-	background-repeat: no-repeat;
-	background-size: calc(var(--font-spritemap-grid-width) * var(--font-spritemap-column-count) / var(--font-spritemap-scale-factor)) calc(var(--font-spritemap-grid-height) * var(--font-spritemap-row-count) / var(--font-spritemap-scale-factor));
+    overflow: visible;
+    display: inline-block;
+    width: var(--font-spritemap-scaled-width);
+    height: var(--font-spritemap-scaled-height);
+    background: var(--font-spritemap);
+    background-repeat: no-repeat;
+    background-size: calc(var(--font-spritemap-grid-width) * var(--font-spritemap-column-count) / var(--font-spritemap-scale-factor)) calc(var(--font-spritemap-grid-height) * var(--font-spritemap-row-count) / var(--font-spritemap-scale-factor));
 }
 
 td:has(.font_example_image) {
-	vertical-align: bottom;
+    vertical-align: bottom;
 }
 
 .A-OTF-BokutohNStd-Regular-example { background-position: calc(var(--font-spritemap-scaled-width) * -1) calc(var(--font-spritemap-scaled-height) * -0); }
@@ -330,24 +330,24 @@ td:has(.font_example_image) {
 .sakamata-font-500-nostrict-example { background-position: calc(var(--font-spritemap-scaled-width) * -9) calc(var(--font-spritemap-scaled-height) * -1); }
 
 #explanation {
-	line-height: 1.6em;
+    line-height: 1.6em;
 }
 
 .help {
-	cursor: help;
-	border-bottom: 1px dotted var(--lighter-gray2);
+    cursor: help;
+    border-bottom: 1px dotted var(--lighter-gray2);
 }
 
 .speaker-button {
-	content: var(--speaker-button);
+    content: var(--speaker-button);
     user-select: none;
 }
 
 .shortcuts-image {
-	min-width: 277px;
-	min-height: 326px;
+    min-width: 277px;
+    min-height: 326px;
 }
 
 .shortcuts-image:hover {
-	content: var(--shortcuts-image)
+    content: var(--shortcuts-image)
 }
