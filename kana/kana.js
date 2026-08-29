@@ -146,8 +146,8 @@ let replacements = {
     'chi': ['ti'],
     'shi': ['si'],
     'tsu': ['tu'],
-    'du': ['zu'],
-    'di': ['ji', 'zi'],
+    'du': ['zu', 'dwu'],
+    'di': ['ji', 'zi', 'dhi'],
     'fu': ['hu'],
     'dya': ['ja'],
     'dyo': ['jo'],
@@ -162,8 +162,6 @@ let replacements = {
     'tso': ['tzo'],
     'tu': ['twu'],
     'ti': ['thi'],
-    'du': ['dwu'],
-    'di': ['dhi'],
 };
 
 function get_display_reading(reading) {
