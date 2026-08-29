@@ -22,6 +22,17 @@
     --speaker-button: url(play-dark.png);
     --shortcuts-image: url(shortcuts-dark.png);
 
+	--font-spritemap: url("font_preview/font_preview_spritemap_dark.png");
+	--font-spritemap-grid-width: 90px;
+	--font-spritemap-grid-height: 62px;
+
+	--font-spritemap-column-count: 10;
+	--font-spritemap-row-count: 2;
+	--font-spritemap-scale-factor: 2;
+
+	--font-spritemap-scaled-width: calc(var(--font-spritemap-grid-width) / var(--font-spritemap-scale-factor));
+	--font-spritemap-scaled-height: calc(var(--font-spritemap-grid-height) / var(--font-spritemap-scale-factor));
+
 	--A-OTF-BokutohNStd-Regular-example: url("fonts_dark/A-OTF-BokutohNStd-Regular/ぎ.png");
 	--A-OTF-FolkPro-Regular-example: url("fonts_dark/A-OTF-FolkPro-Regular/ぎ.png");
 	--A-OTF-HappyNStd-Regular-example: url("fonts_dark/A-OTF-HappyNStd-Regular/ぎ.png");
@@ -67,25 +78,7 @@
         --speaker-button: url(play-light.png);
         --shortcuts-image: url(shortcuts-light.png);
 
-		--A-OTF-BokutohNStd-Regular-example: url("fonts_light/A-OTF-BokutohNStd-Regular/ぎ.png");
-		--A-OTF-FolkPro-Regular-example: url("fonts_light/A-OTF-FolkPro-Regular/ぎ.png");
-		--A-OTF-HappyNStd-Regular-example: url("fonts_light/A-OTF-HappyNStd-Regular/ぎ.png");
-		--A-OTF-KumoyaStd-Regular-example: url("fonts_light/A-OTF-KumoyaStd-Regular/ぎ.png");
-		--A-OTF-KyokaICAPro-Regular-example: url("fonts_light/A-OTF-KyokaICAPro-Regular/ぎ.png");
-		--A-OTF-Shuuei3Std-Regular-example: url("fonts_light/A-OTF-Shuuei3Std-Regular/ぎ.png");
-		--A-OTF-ZenGoNStd-Regular-example: url("fonts_light/A-OTF-ZenGoNStd-Regular/ぎ.png");
-		--ArmedBanana-example: url("fonts_light/ArmedBanana/ぎ.png");
-		--hiragino-kaku-example: url("fonts_light/hiragino-kaku/ぎ.png");
-		--DFCry5_0-example: url("fonts_light/DFCry5_0/ぎ.png");
-		--DFMrg3_0-example: url("fonts_light/DFMrg3_0/ぎ.png");
-		--F5AJCCPE_0-example: url("fonts_light/F5AJCCPE_0/ぎ.png");
-		--F5AJCMHG-example: url("fonts_light/F5AJCMHG/ぎ.png");
-		--MT_TARE-example: url("fonts_light/MT_TARE/ぎ.png");
-		--SM-WIN-example: url("fonts_light/SM-WIN/ぎ.png");
-		--SNsanafon-example: url("fonts_light/SNsanafon/ぎ.png");
-		--sea-example: url("fonts_light/sea/ぎ.png");
-		--KOI-WIN-example: url("fonts_light/KOI-WIN/ぎ.png");
-		--sakamata-font-500-nostrict-example: url("fonts_light/sakamata-font-500-nostrict/ぎ.png");
+		--font-spritemap: url("font_preview/font_preview_spritemap_light.png");
     }
 }
 
@@ -303,28 +296,38 @@ ul#tools li a {
 }
 
 .font_example_image {
-	width: 47px;
+	overflow: visible;
+	display: inline-block;
+	width: var(--font-spritemap-scaled-width);
+	height: var(--font-spritemap-scaled-height);
+	background: var(--font-spritemap);
+	background-repeat: no-repeat;
+	background-size: calc(var(--font-spritemap-grid-width) * var(--font-spritemap-column-count) / var(--font-spritemap-scale-factor)) calc(var(--font-spritemap-grid-height) * var(--font-spritemap-row-count) / var(--font-spritemap-scale-factor));
 }
 
-.A-OTF-BokutohNStd-Regular-example { content: var(--A-OTF-BokutohNStd-Regular-example); }
-.A-OTF-FolkPro-Regular-example { content: var(--A-OTF-FolkPro-Regular-example); }
-.A-OTF-HappyNStd-Regular-example { content: var(--A-OTF-HappyNStd-Regular-example); }
-.A-OTF-KumoyaStd-Regular-example { content: var(--A-OTF-KumoyaStd-Regular-example); }
-.A-OTF-KyokaICAPro-Regular-example { content: var(--A-OTF-KyokaICAPro-Regular-example); }
-.A-OTF-Shuuei3Std-Regular-example { content: var(--A-OTF-Shuuei3Std-Regular-example); }
-.A-OTF-ZenGoNStd-Regular-example { content: var(--A-OTF-ZenGoNStd-Regular-example); }
-.ArmedBanana-example { content: var(--ArmedBanana-example); }
-.hiragino-kaku-example { content: var(--hiragino-kaku-example); }
-.DFCry5_0-example { content: var(--DFCry5_0-example); }
-.DFMrg3_0-example { content: var(--DFMrg3_0-example); }
-.F5AJCCPE_0-example { content: var(--F5AJCCPE_0-example); }
-.F5AJCMHG-example { content: var(--F5AJCMHG-example); }
-.MT_TARE-example { content: var(--MT_TARE-example); }
-.SM-WIN-example { content: var(--SM-WIN-example); }
-.SNsanafon-example { content: var(--SNsanafon-example); }
-.sea-example { content: var(--sea-example); }
-.KOI-WIN-example { content: var(--KOI-WIN-example); }
-.sakamata-font-500-nostrict-example { content: var(--sakamata-font-500-nostrict-example); }
+td:has(.font_example_image) {
+	vertical-align: bottom;
+}
+
+.A-OTF-BokutohNStd-Regular-example { background-position: calc(var(--font-spritemap-scaled-width) * -1) calc(var(--font-spritemap-scaled-height) * -0); }
+.A-OTF-FolkPro-Regular-example { background-position: calc(var(--font-spritemap-scaled-width) * -2) calc(var(--font-spritemap-scaled-height) * -0); }
+.A-OTF-HappyNStd-Regular-example { background-position: calc(var(--font-spritemap-scaled-width) * -3) calc(var(--font-spritemap-scaled-height) * -0); }
+.A-OTF-KumoyaStd-Regular-example { background-position: calc(var(--font-spritemap-scaled-width) * -4) calc(var(--font-spritemap-scaled-height) * -0); }
+.A-OTF-KyokaICAPro-Regular-example { background-position: calc(var(--font-spritemap-scaled-width) * -5) calc(var(--font-spritemap-scaled-height) * -0); }
+.A-OTF-Shuuei3Std-Regular-example { background-position: calc(var(--font-spritemap-scaled-width) * -6) calc(var(--font-spritemap-scaled-height) * -0); }
+.A-OTF-ZenGoNStd-Regular-example { background-position: calc(var(--font-spritemap-scaled-width) * -7) calc(var(--font-spritemap-scaled-height) * -0); }
+.ArmedBanana-example { background-position: calc(var(--font-spritemap-scaled-width) * -8) calc(var(--font-spritemap-scaled-height) * -0); }
+.hiragino-kaku-example { background-position: calc(var(--font-spritemap-scaled-width) * -9) calc(var(--font-spritemap-scaled-height) * -0); }
+.DFCry5_0-example { background-position: calc(var(--font-spritemap-scaled-width) * -0) calc(var(--font-spritemap-scaled-height) * -1); }
+.DFMrg3_0-example { background-position: calc(var(--font-spritemap-scaled-width) * -1) calc(var(--font-spritemap-scaled-height) * -1); }
+.F5AJCCPE_0-example { background-position: calc(var(--font-spritemap-scaled-width) * -2) calc(var(--font-spritemap-scaled-height) * -1); }
+.F5AJCMHG-example { background-position: calc(var(--font-spritemap-scaled-width) * -3) calc(var(--font-spritemap-scaled-height) * -1); }
+.MT_TARE-example { background-position: calc(var(--font-spritemap-scaled-width) * -4) calc(var(--font-spritemap-scaled-height) * -1); }
+.SM-WIN-example { background-position: calc(var(--font-spritemap-scaled-width) * -5) calc(var(--font-spritemap-scaled-height) * -1); }
+.SNsanafon-example { background-position: calc(var(--font-spritemap-scaled-width) * -6) calc(var(--font-spritemap-scaled-height) * -1); }
+.sea-example { background-position: calc(var(--font-spritemap-scaled-width) * -7) calc(var(--font-spritemap-scaled-height) * -1); }
+.KOI-WIN-example { background-position: calc(var(--font-spritemap-scaled-width) * -8) calc(var(--font-spritemap-scaled-height) * -1); }
+.sakamata-font-500-nostrict-example { background-position: calc(var(--font-spritemap-scaled-width) * -9) calc(var(--font-spritemap-scaled-height) * -1); }
 
 #explanation {
 	line-height: 1.6em;
